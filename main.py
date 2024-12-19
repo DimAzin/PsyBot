@@ -10,7 +10,7 @@ import asyncio
 
 # Ваши токены
 TELEGRAM_API_TOKEN = '7515340328:AAHuABhVxypqZh0wypTpJoyTFXpTIMCJJD8'
-OPENAI_API_KEY = ''
+OPENAI_API_KEY = ' '
 
 # Инициализация бота и диспетчера
 bot = Bot(token=TELEGRAM_API_TOKEN)
