@@ -9,8 +9,19 @@ from aiogram import F
 import asyncio
 
 # Ваши токены
-TELEGRAM_API_TOKEN = '7515340328:AAHuABhVxypqZh0wypTpJoyTFXpTIMCJJD8'
-OPENAI_API_KEY = ' '
+# Получение токена из переменной окружения
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+
+# Убедитесь, что переменная установлена
+if not TELEGRAM_BOT_TOKEN:
+    raise ValueError("No TELEGRAM_BOT_TOKEN set in environment variables")
+
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+# Убедитесь, что переменная установлена
+if not OPENAI_API_KEY:
+    raise ValueError("No OPENAI_API_KEY set in environment variables")
+
 
 # Инициализация бота и диспетчера
 bot = Bot(token=TELEGRAM_API_TOKEN)
