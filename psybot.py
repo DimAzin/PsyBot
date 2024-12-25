@@ -1,5 +1,3 @@
-# KBT_terapist_bot OpenAI APIkey = "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"
-
 import os
 import openai
 from aiogram import Bot, Dispatcher, types
@@ -37,7 +35,7 @@ async def send_request_to_chatgpt(prompt: str) -> str:
             model="gpt-4o-mini",  # Или используйте 'gpt-4', если доступно
             messages=[
                 {"role": "system", "content": "assistant"},
-                {"role": "user", "content": "Ты психолог с опытом в НЛП и КПТ более 5 лет. Проведи психологическую консультацию по запросу. " + prompt}
+                {"role": "user", "content": "" + prompt} #Ты психолог с опытом в НЛП и КПТ более 5 лет. Проведи психологическую консультацию по запросу.
             ]
         )
         return response['choices'][0]['message']['content'].strip()
